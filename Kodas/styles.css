@@ -1,0 +1,369 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: block;
+}
+.MainHeader {
+  display: flex;
+  background-color: white;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  height: 6rem;
+  padding: 0 1rem;
+}
+.Logo {
+  display: inline-block;
+  border-radius: 0;
+  width: 10em;
+
+  align-items: center;
+}
+ul {
+  list-style: none;
+}
+.MenuNav {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgb(90 89 89 / 13%);
+  overflow: hidden;
+}
+.Menu a {
+  display: block;
+  padding: 30px;
+  color: black;
+}
+.Menu a:hover {
+  background-color: black;
+}
+.MenuNav {
+  max-height: 0;
+  transition: 0.5s ease-out;
+}
+.hamb {
+  cursor: pointer;
+  float: right;
+  padding: 40px 20px;
+}
+.hamb-line {
+  background: black;
+  display: block;
+  height: 2px;
+  position: relative;
+  width: 24px;
+}
+.hamb-line::before,
+.hamb-line::after {
+  background: black;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+.hamb-line::before {
+  top: 5px;
+}
+.hamb-line::after {
+  top: -5px;
+}
+.side-menu {
+  display: none;
+}
+.side-menu:checked ~ .MenuNav {
+  max-height: 50%;
+}
+.side-menu:checked ~ .hamb .hamb-line {
+  background: transparent;
+}
+.side-menu:checked ~ .hamb .hamb-line::before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+.side-menu:checked ~ .hamb .hamb-line::after {
+  transform: rotate(45deg);
+  top: 0;
+}
+@media (min-width: 768px) {
+  .MenuNav {
+    max-height: none;
+    top: 0;
+    position: relative;
+    float: right;
+    width: fit-content;
+    background-color: white;
+  }
+  .Menu li {
+    float: left;
+  }
+  .Menu a:hover {
+    background-color: transparent;
+  }
+  .hamb {
+    display: none;
+  }
+}
+main {
+  padding: 0;
+}
+.container1 {
+  position: relative;
+  margin: 0 0 0 1rem;
+  overflow: hidden;
+  padding: 0 0 2rem 0;
+}
+.graphic-img {
+  position: absolute;
+}
+.graphic-img img {
+  width: 100%;
+  object-position: 130px;
+  object-fit: cover;
+}
+.container1-text {
+  width: 50%;
+  padding: 3rem 0rem 1rem 0;
+  max-width: 25rem;
+}
+.PinkCaps {
+  text-transform: uppercase;
+  color: #ff3998;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.1em;
+  margin: 0;
+}
+h1 {
+  margin: 0 0 1rem;
+  font-weight: 900;
+  font-size: 48px;
+}
+h2 {
+  margin: 0 0 1rem;
+  font-weight: 900;
+  font-size: 56px;
+}
+h3 {
+  margin: 0 0 1rem;
+  font-weight: 500;
+  font-size: 40px;
+}
+p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  color: #555555;
+  margin: 0 0 1rem;
+}
+.SignUp-Button {
+  border: 5px solid #0000;
+  padding: 1rem 1rem;
+  border-radius: 30px;
+  background: linear-gradient(white, white) padding-box,
+    linear-gradient(to right, rgb(226, 25, 237), rgb(255, 98, 0), yellow)
+      border-box;
+}
+@media (min-width: 768px) {
+  .container1 {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    padding: 0 0 1rem 0;
+  }
+  .graphic-img {
+    position: relative;
+  }
+  .graphic-img img {
+    object-position: center;
+    object-fit: cover;
+  }
+  .container1-text {
+    width: 50%;
+  }
+}
+.container2 {
+  padding: 4rem 1rem 1rem 1rem;
+  background-image: url(background.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  text-align: left;
+  max-width: 100rem;
+}
+@media (min-width: 768px) {
+  .container2 {
+    border-radius: 20px;
+  }
+}
+.container3 {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.container3 {
+  max-height: 10rem;
+  overflow: hidden;
+}
+.container3 img {
+  width: 10rem;
+  height: 3rem;
+  margin: 1rem;
+}
+.container4 {
+  padding: 1.5rem 3rem 1.5rem 1rem;
+}
+.container4 a {
+  color: #555555;
+}
+.container5 {
+  padding: 0 2rem 2rem 0;
+  display: flex;
+  flex-direction: row;
+  overflow: auto;
+  white-space: nowrap;
+}
+.NFT {
+  margin: 1rem;
+  width: 290px;
+  background-color: rgb(206, 205, 205);
+  border-radius: 10%;
+}
+@media (min-width: 768px) {
+  .container5 {
+    display: flex;
+  }
+  .NFT {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+  }
+}
+table {
+  width: 290px;
+  padding: 1rem;
+}
+.ETH {
+  height: 1rem;
+}
+td:first-child {
+  text-align: left;
+}
+td {
+  text-align: right;
+}
+.Gloop {
+  color: #ff8139;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+}
+.bid {
+  text-transform: uppercase;
+  color: #777777;
+  font-size: 14px;
+  font-weight: 500;
+}
+.text2 {
+  color: #777777;
+}
+.container6 {
+  position: relative;
+  margin: 1rem 0 0 1rem;
+  overflow: hidden;
+  padding: 0 0 2rem 0;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.graphic-img2 {
+  position: absolute;
+}
+.graphic-img2 img {
+  width: 100%;
+
+  object-fit: cover;
+}
+.container6-text {
+  padding: 3rem 0rem 1rem 0;
+}
+
+@media (min-width: 768px) {
+  .container6 {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    padding: 0 0 1rem 0;
+  }
+  .graphic-img2 {
+    position: relative;
+  }
+  .graphic-img2 img {
+    object-position: center;
+    object-fit: cover;
+  }
+  .container6-text {
+    width: 70%;
+  }
+}
+.container7 {
+  margin: 1rem;
+}
+.Social img {
+  width: 1rem;
+  height: 1rem;
+}
+.container7-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 1rem 0 0 0;
+}
+.Meniu {
+  display: flex;
+  flex-direction: column;
+  width: 10rem;
+  height: 10rem;
+}
+.Meniu a {
+  text-decoration: none;
+  color: #555555;
+  size: 20px;
+  font-weight: 400;
+}
+.Caps {
+  text-decoration: none;
+  size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+footer {
+  padding: 2rem;
+  color: #777777;
+  display: inline-flex;
+  justify-content: space-between;
+}
+.footerLauch {
+  display: none;
+}
+@media (min-width: 768px) {
+  .footerLauch {
+    display: unset;
+  }
+}
+@media (min-width: 768px) {
+  body {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100rem;
+    width: 88%;
+  }
+}
